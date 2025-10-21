@@ -1,0 +1,24 @@
+# QuipInsta - Instagram Grid Splitter
+# https://quipinsta.com
+
+User-agent: *
+Allow: /
+Disallow: /emails.xml
+
+Sitemap: https://quipinsta.com/sitemap.xml
+
+# Crawl Delay
+Crawl-delay: 1
+
+# Popular Search Engines
+User-agent: Googlebot
+Allow: /
+Disallow: /emails.xml
+
+User-agent: Bingbot
+Allow: /
+Disallow: /emails.xml
+
+User-agent: Slurp
+Allow: /
+Disallow: /emails.xml
