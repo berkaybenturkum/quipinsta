@@ -161,9 +161,9 @@ def send_contact():
 @app.route('/view_messages')
 def view_messages():
     """Kaydedilen iletişim mesajlarını görüntüle"""
-    init_contact_messages()
-    
     try:
+        init_contact_messages()
+        
         with open(CONTACT_MESSAGES_FILE, 'r', encoding='utf-8') as f:
             messages = json.load(f)
         
