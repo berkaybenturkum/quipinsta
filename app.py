@@ -168,25 +168,24 @@ def view_messages():
             messages = json.load(f)
         
         # HTML olarak göster
-        html = """
-        <!DOCTYPE html>
-        <html lang="tr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>İletişim Mesajları - QuipInsta</title>
-            <script src="https://cdn.tailwindcss.com"></script>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-            <style>body { font-family: Inter, sans-serif; }</style>
-        </head>
-        <body class="bg-gray-50">
-            <div class="container mx-auto px-4 py-8">
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
-                        <h1 class="text-3xl font-bold text-gray-900 mb-2">📬 İletişim Mesajları</h1>
-                        <p class="text-gray-600">Toplam <strong>{}</strong> mesaj</p>
-                    </div>
-        """.format(len(messages))
+        html = f"""<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Mesajları - QuipInsta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>body {{ font-family: Inter, sans-serif; }}</style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">📬 İletişim Mesajları</h1>
+                <p class="text-gray-600">Toplam <strong>{len(messages)}</strong> mesaj</p>
+            </div>
+"""
         
         if not messages:
             html += """
